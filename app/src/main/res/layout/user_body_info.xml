@@ -5,32 +5,39 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textViewUsernamePrompt"
+        android:id="@+id/textViewBodParameterHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Avatar\nCreation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="50dp"
+
         />
     <TextView
-        android:id="@+id/textViewUsernamePrompt"
+        android:id="@+id/textViewHeightPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintLeft_toLeftOf="@id/editTextUsername"
-        app:layout_constraintBottom_toTopOf="@id/editTextUsername"
+        android:text="Height"
+        app:layout_constraintLeft_toLeftOf="@id/editTextHeight"
+        app:layout_constraintTop_toBottomOf="@id/textViewBodParameterHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="50dp"
+        android:paddingStart="50dp"
         />
+
     <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/editTextHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:autofillHints="Username"
         android:ems="10"
-        android:inputType="text"
-        android:padding="@dimen/cardview_default_radius"
-        app:layout_constraintLeft_toLeftOf="@id/textViewPasswordPrompt"
-        app:layout_constraintBottom_toTopOf="@id/textViewPasswordPrompt"
-        />
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@id/textViewHeightPrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeightPrompt" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
