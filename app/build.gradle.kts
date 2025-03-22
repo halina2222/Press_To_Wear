@@ -16,7 +16,12 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures{
+        compose = true
+    }
+    composeOptions{
+        kotlinCompilerExtensionVersion = "1.5.14"
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -50,4 +55,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation ("com.github.ibrahimsn98:SmoothBottomBar:1.7.9")
+
+    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.compose.ui:ui-graphics:1.7.8")
+    implementation("androidx.compose.ui:ui:1.7.8")
+    implementation("androidx.compose.ui:ui-tooling:1.7.8")
+    implementation("androidx.compose.material3:material3:1.3.1")
 }

@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/another_item_1"
-        android:title="Item 1"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title=""
+        android:icon="@drawable/fiticon"/>
     <item
         android:id="@+id/another_item_2"
-        android:title="Item 2"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title=""
+        android:icon="@drawable/homeicon"/>
     <item
         android:id="@+id/another_item_3"
-        android:title="Item 3"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title=""
+        android:icon="@drawable/shopicon"/>
     <item
         android:id="@+id/another_item_4"
-        android:title="Item 4"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title=""
+        android:icon="@drawable/settingicon"/>
 
 </menu>
