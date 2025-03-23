@@ -13,9 +13,17 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -23,16 +31,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.fragment_test2.R
-import com.example.fragment_test2.setting_page_font
+import com.example.fragment_test2.*
 
 @Composable
 fun HomePage(){
-    val TextFont = FontFamily(
-        Font(R.font.inknutantiqualight)
-    )
-    val SearchFont = FontFamily(
-        Font(R.font.inriasans)
-    )
+
     Column (modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top){
         Text(
             text = "What you are looking for?",
@@ -66,3 +69,5 @@ private fun ClothesItem(item: searchedClothes){
         contentDescription = item.name,
         modifier = Modifier.size(150.dp).padding(3.dp))
 }
+
+

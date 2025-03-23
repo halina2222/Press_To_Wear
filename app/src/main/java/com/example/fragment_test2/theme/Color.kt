@@ -1,6 +1,8 @@
 package com.example.fragment_test2
 
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
@@ -21,3 +23,19 @@ val cardColor = Color(0xFFFBFBFB)
 val searchBar = Color(0xFFE9E9E9)
 val searchBar_Text = Color(0xFFB0B0B0)
 val searchBarBound = Color(0xFF6B6E71)
+
+val TextFont = FontFamily(
+    Font(R.font.inknutantiqualight)
+)
+
+val ButtonTextFont = FontFamily(
+    Font(R.font.inriasans)
+)
+
+val SearchFont = FontFamily(
+    Font(R.font.inriasansbold)
+
+)
+val TextFont2 = FontFamily(
+    Font(R.font.inknutantiquamedium)
+)

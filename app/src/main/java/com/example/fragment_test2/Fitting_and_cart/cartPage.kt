@@ -49,9 +49,7 @@ fun cartPage(){
     val ButtonFont = FontFamily(
         Font(R.font.inriasans)
     )
-    val SearchFont = FontFamily(
-        Font(R.font.inriasansbold)
-    )
+
 
     Column {
         Row (modifier = Modifier.fillMaxWidth().height(60.dp)){
@@ -63,6 +61,7 @@ fun cartPage(){
                 singleLine = true,
                 colors = TextFieldDefaults.colors(
                     unfocusedLabelColor = searchBar,
+                    unfocusedContainerColor = searchBar,
                     unfocusedIndicatorColor = searchBar_Text,
                     focusedContainerColor = Color.Transparent,
                     focusedIndicatorColor = searchBarBound,
@@ -97,14 +96,14 @@ fun cartPage(){
             modifier = Modifier.fillMaxWidth()
         ) {
             itemsIndexed(myList, itemContent = { index, item ->
-                ClothesItem(item = item)
+                ClothesCard(item = item)
             }
             )
         }
     }
 }
 @Composable
-private fun ClothesItem(item: savedClothes){
+private fun ClothesCard(item: savedClothes){
     val TextFont = FontFamily(
         Font(R.font.inknutantiqualight)
     )
@@ -126,7 +125,6 @@ private fun ClothesItem(item: savedClothes){
                         Spacer(modifier = Modifier.width(10.dp))
                         Text(text = "Size", fontFamily = TextFont )
                     }
-
                     Text(text = "Clothes Type", fontFamily = TextFont )
                     Text(text = item.name, fontFamily = TextFont )
                     Text(text = "price", fontFamily = TextFont )

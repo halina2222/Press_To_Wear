@@ -24,9 +24,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun SettingPage(){
-    val fontFamily = FontFamily(
-        Font(R.font.inknutantiqualight)
-    )
+
     Column(){
         Row(modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically)
@@ -45,7 +43,7 @@ fun SettingPage(){
                 color = setting_page_font,
                 fontSize = 20.sp,
                 textAlign = TextAlign.Center,
-                fontFamily = fontFamily,
+                fontFamily = TextFont,
                 modifier = Modifier.wrapContentWidth()
             )
 
@@ -59,7 +57,7 @@ fun SettingPage(){
             fontSize = 20.sp,
             textDecoration = TextDecoration.Underline,
             textAlign = TextAlign.Center,
-            fontFamily = fontFamily,
+            fontFamily = TextFont,
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(4.dp))
@@ -75,7 +73,7 @@ fun SettingPage(){
             fontSize = 20.sp,
             textDecoration = TextDecoration.Underline,
             textAlign = TextAlign.Center,
-            fontFamily = fontFamily,
+            fontFamily = TextFont,
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(4.dp))
@@ -94,9 +92,7 @@ fun UniformButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val fontFamily = FontFamily(
-        Font(R.font.inknutantiquamedium)
-    )
+
     Button(
         onClick = { },
         modifier = Modifier.fillMaxWidth(),
@@ -109,7 +105,7 @@ fun UniformButton(
     {
         Text(text = text,
             color = setting_page_font,
-            fontFamily = fontFamily,
+            fontFamily = TextFont2,
             fontSize = 16.sp,
             textAlign = TextAlign.Start,
             modifier = Modifier.fillMaxWidth())
