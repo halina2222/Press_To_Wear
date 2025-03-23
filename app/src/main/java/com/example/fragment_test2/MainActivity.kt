@@ -1,17 +1,11 @@
 package com.example.fragment_test2
 
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.ComposeView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
+import com.example.fragment_test2.Fitting_and_cart.FittingPage
+import com.example.fragment_test2.Fitting_and_cart.cartPage
+import com.example.fragment_test2.Homepage.HomePage
 import com.example.fragment_test2.databinding.ActivityMainBinding
 import me.ibrahimsn.lib.SmoothBottomBar
 
@@ -25,17 +19,26 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         val bottomBar: SmoothBottomBar = findViewById(R.id.bottomBar)
         composeView = findViewById(R.id.View)
-
+        composeView.setContent { HomePage() }
         bottomBar.setOnItemSelectedListener {
             when(it){
                 0->{
+                    composeView.setContent {
+                        HomePage()
+                    }
                 }
                 1->{
+                    composeView.setContent {
+                        FittingPage()
+                    }
                 }
                 2->{
+                    composeView.setContent {
+                        cartPage()
+
+                    }
                 }
                 3->{
                     composeView.setContent {

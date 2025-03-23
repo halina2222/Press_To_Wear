@@ -51,7 +51,7 @@ fun SettingPage(){
 
         }
         Spacer(modifier = Modifier.height(8.dp))
-        Divider(color = Color.Black, thickness = 2.dp, modifier = Modifier.fillMaxWidth())
+        Divider(color = setting_page_font, thickness = 2.dp, modifier = Modifier.fillMaxWidth())
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = "  Avatar Management  ",
