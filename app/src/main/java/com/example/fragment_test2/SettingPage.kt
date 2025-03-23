@@ -102,7 +102,7 @@ fun UniformButton(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(3.dp),
         colors = ButtonDefaults.buttonColors(
-            contentColor = Color.Black,
+            contentColor = buttonTextColor,
             containerColor = buttonColor
         )
     )
