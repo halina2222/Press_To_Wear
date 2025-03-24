@@ -28,7 +28,7 @@ fun registerScreen(paddingValues: PaddingValues,
                 onNavigateToCreation()
             }
         ) {
-            Text("go to creation")
+            Text("go to Avatar creation")
         }
     }
 }
