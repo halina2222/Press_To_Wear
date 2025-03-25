@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.platform.ComposeView
 import com.example.fragment_test2.Fitting_and_cart.FittingPage
 import com.example.fragment_test2.Fitting_and_cart.cartPage
-import com.example.fragment_test2.Homepage.HomePage
+import com.example.fragment_test2.Homepage.HomeNavigation
 import com.example.fragment_test2.databinding.ActivityMainBinding
 import me.ibrahimsn.lib.SmoothBottomBar
 
@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val bottomBar: SmoothBottomBar = findViewById(R.id.bottomBar)
         composeView = findViewById(R.id.View)
-        composeView.setContent { HomePage() }
+        composeView.setContent { HomeNavigation() }
         bottomBar.setOnItemSelectedListener {
             when(it){
                 0->{
                     composeView.setContent {
-                        HomePage()
+                        HomeNavigation()
                     }
                 }
                 1->{

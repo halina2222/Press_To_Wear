@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -49,7 +50,7 @@ fun SettingPage(){
 
         }
         Spacer(modifier = Modifier.height(8.dp))
-        Divider(color = setting_page_font, thickness = 2.dp, modifier = Modifier.fillMaxWidth())
+        HorizontalDivider(color = setting_page_font, thickness = 2.dp, modifier = Modifier.fillMaxWidth())
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = "  Avatar Management  ",
