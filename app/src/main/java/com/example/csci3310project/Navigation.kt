@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.login.takeuserface.CameraScreen
 import com.example.login.screen.*
+import com.example.login.screen.AvatarCreation.*
 
 sealed class Screen(val route: String){
     object Login : Screen("login_screen")

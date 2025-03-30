@@ -76,9 +76,7 @@ fun registerScreen(paddingValues: PaddingValues,
         )
     }
 
-    val titlefontFamily = FontFamily(
-        Font(R.font.jsmath)
-    )
+
     Column(modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
