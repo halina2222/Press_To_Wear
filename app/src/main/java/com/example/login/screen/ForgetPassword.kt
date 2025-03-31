@@ -37,6 +37,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.csci3310project.Screen
 import com.example.login.R
 import com.example.login.ui.theme.LoginPageButtonColor
 import com.example.login.ui.theme.PromptfontFamily
@@ -44,7 +46,7 @@ import com.example.login.ui.theme.RegisterPageButtonColor
 import com.example.login.ui.theme.titlefontFamily
 
 @Composable
-fun ForgetPasswordScreen(paddingValues: PaddingValues, onNavigateToLogin: () -> Unit = {},onNavigationToFP2:() ->Unit={}){
+fun ForgetPasswordScreen(navController: NavController){
     var username by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var phoneNumber by remember { mutableStateOf("") }
@@ -83,7 +85,7 @@ fun ForgetPasswordScreen(paddingValues: PaddingValues, onNavigateToLogin: () -> 
                     colors = ButtonDefaults.buttonColors(RegisterPageButtonColor),
                     shape =RoundedCornerShape(5.dp),
                     onClick = {
-                        onNavigateToLogin()
+                        navController.navigate(Screen.Login.route)
                     }
                 ) {
                     Text("Back",fontSize = 16.sp, fontFamily = PromptfontFamily, color = Black)
@@ -93,7 +95,7 @@ fun ForgetPasswordScreen(paddingValues: PaddingValues, onNavigateToLogin: () -> 
                     colors = ButtonDefaults.buttonColors(RegisterPageButtonColor),
                     shape =RoundedCornerShape(5.dp),
                     onClick = {
-                        onNavigationToFP2()
+                        navController.navigate(Screen.ForgetPassword2.route)
                     }
                 ) {
                     Text("Verify",fontSize = 16.sp, fontFamily = PromptfontFamily, color = Black)

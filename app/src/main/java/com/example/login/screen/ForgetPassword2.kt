@@ -37,6 +37,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.csci3310project.Screen
 import com.example.login.R
 import com.example.login.ui.theme.LoginPageButtonColor
 import com.example.login.ui.theme.PromptfontFamily
@@ -44,7 +46,7 @@ import com.example.login.ui.theme.RegisterPageButtonColor
 import com.example.login.ui.theme.titlefontFamily
 
 @Composable
-fun ForgetPassword2Screen(paddingValues: PaddingValues, onNavigateToLogin: () -> Unit = {}){
+fun ForgetPassword2Screen(navController: NavController){
     var password by remember { mutableStateOf("") }
     var confirmedPassword by remember { mutableStateOf("") }
     Box(modifier = Modifier.fillMaxSize()){
@@ -80,7 +82,7 @@ fun ForgetPassword2Screen(paddingValues: PaddingValues, onNavigateToLogin: () ->
                 colors = ButtonDefaults.buttonColors(RegisterPageButtonColor),
                 shape =RoundedCornerShape(5.dp),
                 onClick = {
-                    onNavigateToLogin()
+                    navController.navigate(Screen.Login.route)
                 }
             ) {
                 Text("Confirm",fontSize = 16.sp, fontFamily = PromptfontFamily, color = Black)

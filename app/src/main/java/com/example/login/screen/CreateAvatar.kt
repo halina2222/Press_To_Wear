@@ -1,8 +1,7 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.example.login.screen.AvatarCreation
+package com.example.login.screen
 
-import android.widget.Toast
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -24,20 +23,15 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
@@ -48,34 +42,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color.Companion.Black
-import androidx.compose.ui.graphics.Color.Companion.Blue
-import androidx.compose.ui.graphics.Color.Companion.Red
-import androidx.compose.ui.graphics.Color.Companion.Transparent
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.login.R
-import com.example.login.screen.Inputdata
 import com.example.login.ui.theme.PromptfontFamily
-import com.example.login.ui.theme.Purple40
-import com.example.login.ui.theme.Purple80
-import com.example.login.ui.theme.RegisterPageButtonColor
 import com.example.login.ui.theme.titlefontFamily
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.navigation.NavController
 import com.example.login.ui.theme.AbuttonColor
 import com.example.login.ui.theme.processbar
 import com.example.login.ui.theme.processbarbackground
 
 @Composable
-fun CreateAvatar(paddingValues: PaddingValues,
-                 onNavigateToLogin: () -> Unit = {},
-                 onBack: () -> Unit = {})
+fun CreateAvatar(navController: NavController)
 {
     var progress by remember { mutableStateOf(0.25f) }
     var stage by remember { mutableStateOf(1) }
@@ -291,7 +274,8 @@ fun CreateAvatar(paddingValues: PaddingValues,
                         modifier = Modifier.wrapContentSize(),
                         elevation = ButtonDefaults.buttonElevation(defaultElevation = 5.dp),
                         colors = ButtonDefaults.buttonColors(AbuttonColor),
-                        onClick = { if(stage==1) onBack() else stage = decrease(stage)})
+                        onClick = { if(stage==1)  navController.popBackStack()
+                                    else stage = decrease(stage) })
                     {
                         Text("Back")
                     }

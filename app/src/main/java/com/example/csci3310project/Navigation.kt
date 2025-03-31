@@ -7,7 +7,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.login.takeuserface.CameraScreen
 import com.example.login.screen.*
-import com.example.login.screen.AvatarCreation.*
 
 sealed class Screen(val route: String){
     object Login : Screen("login_screen")
@@ -27,45 +26,24 @@ fun AppNavigation() {
         startDestination = Screen.Login.route
     ) {
         composable(Screen.Login.route) {
-            LoginScreen(
-                paddingValues = PaddingValues(),
-                onNavigateToCameraScreen = { navController.navigate(Screen.Camera.route) },
-                onNavigateToRegister = { navController.navigate(Screen.Register.route) },
-                onNavigateToForgetPw = { navController.navigate(Screen.ForgetPassword.route) }
-            )
+            LoginScreen(navController)
         }
         composable(Screen.Camera.route) {
             CameraScreen(paddingValues = PaddingValues())
         }
 
         composable(Screen.Register.route) {
-            registerScreen(
-                paddingValues = PaddingValues(),
-                onNavigateToLogin = { navController.navigate(Screen.Login.route) },
-                onNavigateToCreation = {navController.navigate(Screen.AvatarCreation.route)}
-            )
+            registerScreen(navController)
         }
         composable(Screen.ForgetPassword.route) {
-            ForgetPasswordScreen(
-                paddingValues = PaddingValues(),
-                onNavigateToLogin = { navController.navigate(Screen.Login.route) },
-                onNavigationToFP2 = {navController.navigate(Screen.ForgetPassword2.route)}
-
-            )
+            ForgetPasswordScreen(navController)
         }
         composable(Screen.ForgetPassword2.route) {
-            ForgetPassword2Screen(
-                paddingValues = PaddingValues(),
-                onNavigateToLogin = { navController.navigate(Screen.Login.route) }
-
-            )
+            ForgetPassword2Screen(navController)
         }
         composable(Screen.AvatarCreation.route) {
-            CreateAvatar(
-                paddingValues = PaddingValues(),
-                onNavigateToLogin = { navController.navigate(Screen.Login.route) },
-                onBack = {navController.popBackStack()}
-            )
+            CreateAvatar(navController)
+                //onBack = {navController.popBackStack()}
         }
     }
 }
