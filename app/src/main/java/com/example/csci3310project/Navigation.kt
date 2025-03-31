@@ -14,6 +14,7 @@ sealed class Screen(val route: String){
     object Camera : Screen("camera_screen")
     object Register : Screen("register_screen")
     object ForgetPassword : Screen("forgetpw_screen")
+    object ForgetPassword2 : Screen("forgetpw2_screen")
     object AvatarCreation: Screen("create_screen")
 
 }
@@ -47,7 +48,16 @@ fun AppNavigation() {
         composable(Screen.ForgetPassword.route) {
             ForgetPasswordScreen(
                 paddingValues = PaddingValues(),
+                onNavigateToLogin = { navController.navigate(Screen.Login.route) },
+                onNavigationToFP2 = {navController.navigate(Screen.ForgetPassword2.route)}
+
+            )
+        }
+        composable(Screen.ForgetPassword2.route) {
+            ForgetPassword2Screen(
+                paddingValues = PaddingValues(),
                 onNavigateToLogin = { navController.navigate(Screen.Login.route) }
+
             )
         }
         composable(Screen.AvatarCreation.route) {
