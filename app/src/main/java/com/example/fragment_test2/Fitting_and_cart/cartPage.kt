@@ -104,9 +104,6 @@ fun cartPage(){
 }
 @Composable
 private fun ClothesCard(item: savedClothes){
-    val TextFont = FontFamily(
-        Font(R.font.inknutantiqualight)
-    )
     Card(
         modifier = Modifier.fillMaxWidth().padding(vertical = 5.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
