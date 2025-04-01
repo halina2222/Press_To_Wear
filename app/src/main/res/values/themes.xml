@@ -1,11 +1,9 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Fragment_test2" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/blue</item>
-        <item name="colorPrimaryVariant">@color/blue</item>
-        <item name="android:statusBarColor">@color/blue</item>
+<!-- res/values/styles.xml -->
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme colors, typography, etc. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_700</item>
     </style>
-
-    <style name="Theme.Fragment_test2" parent="Base.Theme.Fragment_test2" />
 </resources>

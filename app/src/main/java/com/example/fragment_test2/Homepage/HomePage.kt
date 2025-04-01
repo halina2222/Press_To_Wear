@@ -40,13 +40,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.fragment_test2.R
+import com.example.csci3310.R
 import com.example.fragment_test2.*
 
 @Composable
 fun HomePageContent(navController: NavController){
 
-    Column (modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top){
+    Column (modifier = Modifier.fillMaxSize().padding(15.dp), verticalArrangement = Arrangement.Top){
         Text(
             text = "What you are looking for?",
             color = setting_page_font,

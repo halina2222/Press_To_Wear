@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="@color/white"
     tools:context=".MainActivity">
 
@@ -22,21 +22,21 @@
         <androidx.compose.ui.platform.ComposeView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id = "@+id/View"
-            android:layout_marginVertical="10dp"
-            android:layout_marginBottom="5dp"
+            android:id = "@+id/compose_view"
             />
     </LinearLayout>
         <me.ibrahimsn.lib.SmoothBottomBar
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:layout_margin="15dp"
             app:backgroundColor="#35336A"
             app:indicatorRadius="30dp"
             app:iconSize="25dp"
             app:cornerRadius="15dp"
             app:corners="all"
             app:sideMargins="15dp"
+
             app:menu="@menu/menu_nav"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

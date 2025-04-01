@@ -1,6 +1,6 @@
 package com.example.fragment_test2.Fitting_and_cart
 
-import com.example.fragment_test2.R
+import com.example.csci3310.R
 
 data class savedClothes(
     var name: String,

@@ -59,11 +59,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.fragment_test2.*
+import com.example.csci3310.R
 import kotlin.random.Random
 
 @Composable
 fun ResultPage(navController: NavController){
-    Column {
+    Column (modifier = Modifier.padding(15.dp)){
         Row(modifier = Modifier.fillMaxWidth().wrapContentHeight(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically){
             Button(
                 modifier = Modifier.padding(horizontal = 5.dp),

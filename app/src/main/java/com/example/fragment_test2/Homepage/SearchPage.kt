@@ -53,7 +53,7 @@ import kotlin.random.Random
 
 @Composable
 fun SearchPage(navController:NavController){
-    Column {
+    Column(modifier = Modifier.padding(15.dp)) {
         Row(modifier = Modifier.fillMaxWidth().wrapContentHeight(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically){
             Button(
                 modifier = Modifier.padding(horizontal = 5.dp),

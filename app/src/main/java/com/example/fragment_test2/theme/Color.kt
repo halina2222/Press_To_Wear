@@ -2,6 +2,7 @@ package com.example.fragment_test2
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
+import com.example.csci3310.R
 import androidx.compose.ui.text.font.FontFamily
 
 val Purple80 = Color(0xFFD0BCFF)

@@ -36,13 +36,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.csci3310.R
 import com.example.fragment_test2.*
 import com.example.fragment_test2.Homepage.getAllsearchedClothes
 import com.example.fragment_test2.Homepage.searchedClothes
 
 @Composable
 fun FittingPage(){
-    Column(){
+    Column(modifier = Modifier.padding(15.dp)){
         Box(modifier = Modifier.fillMaxWidth().height(500.dp)){
             //where the avatar place
             Column(horizontalAlignment = Alignment.End,

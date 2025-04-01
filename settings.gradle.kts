@@ -21,6 +21,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Fragment_test2"
+rootProject.name = "csci3310"
 include(":app")
  

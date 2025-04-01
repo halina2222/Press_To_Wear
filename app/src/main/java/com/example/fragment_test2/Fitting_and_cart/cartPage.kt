@@ -39,19 +39,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.fragment_test2.R
 import com.example.fragment_test2.*
 import com.example.fragment_test2.buttonTextColor
 
 @Composable
 fun cartPage(){
-
-    val ButtonFont = FontFamily(
-        Font(R.font.inriasans)
-    )
-
-
-    Column {
+    Column(modifier = Modifier.padding(15.dp)) {
         Row (modifier = Modifier.fillMaxWidth().height(60.dp)){
             var searchingitem by remember { mutableStateOf("") }
             OutlinedTextField(
@@ -84,7 +77,7 @@ fun cartPage(){
                 ),
                 modifier = Modifier.fillMaxHeight().padding(top= 8.dp, start = 5.dp, end = 5.dp)
             ){
-                Text(text = "Search", fontFamily = ButtonFont, fontSize = 14.sp)
+                Text(text = "Search", fontFamily = ButtonTextFont, fontSize = 14.sp)
             }
         }
         Spacer(modifier = Modifier.height(15.dp))

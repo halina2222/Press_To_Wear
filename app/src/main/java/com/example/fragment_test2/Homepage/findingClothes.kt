@@ -1,6 +1,6 @@
 package com.example.fragment_test2.Homepage
 
-import com.example.fragment_test2.R
+import com.example.csci3310.R
 
 data class searchedClothes(
     var name: String,
