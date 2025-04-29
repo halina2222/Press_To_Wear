@@ -1,3 +1,3 @@
-This is the merged version of Press to wear, 
-User Interface is done
-Functions still remain a lot
+This an Android application "Press to wear", 
+Only the User Interface is shown.
+
